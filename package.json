@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
+    "serve": "vite preview",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start": "react-scripts start",
@@ -15,15 +16,15 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@headlessui/react": "^1.7.15",
+    "@mui/icons-material": "^5.11.16",
     "@mui/lab": "^5.0.0-alpha.133",
     "@mui/material": "^5.13.4",
     "@mui/styled-engine-sc": "^5.12.0",
+    "@mui/system": "^5.13.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^5.3.11",
-    "@headlessui/react": "^1.7.15",
-    "@mui/icons-material": "^5.11.16"
-  
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
@@ -39,4 +40,3 @@
     "vite": "^4.3.9"
   }
 }
-

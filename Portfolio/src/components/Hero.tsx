@@ -6,7 +6,7 @@ import '../CSS/index.css'
 const Hero = () => {
 
 
-    return <div className="flex flex-col-reverse px-10 mt-56 md:flex-row space-evenly">
+    return <div className="flex flex-col-reverse px-10 pt-56 md:flex-row space-evenly">
         <div
           className="icons mt-4 flex justify-center md:mt-0 md:flex-col md:w-56"
         >
@@ -24,7 +24,7 @@ const Hero = () => {
                 Experienced developer with a passion for solving coding challenges, delivering high-quality software solutions, and continuously expanding knowledge in evolving technologies.
           </h3>
           <button
-            className="bg-violet-600 dark:bg-yellow-500 dark:hover:bg-yellow-400 dark:hover:bg-violet-800 p-3 mt-8 rounded-md text-white"
+            className="bg-violet-600 dark:bg-yellow-500 dark:hover:bg-yellow-400 hover:bg-violet-800 p-3 mt-8 rounded-md text-white"
           >
             Download CV   
             <DownloadIcon/>        
