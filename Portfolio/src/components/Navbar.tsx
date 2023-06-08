@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <ul id="navbar" className="flex dark:text-white items-center justify-between">
-        <h2 className="text-3xl dark:text-white mr-auto">/ R</h2>
+        <h2 className="text-2xl dark:text-white mr-auto">Randy</h2>
         <li>
           <a href="#" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Home</a>
         </li>
