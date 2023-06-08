@@ -40,23 +40,7 @@ export default function AlternateTimeline() {
         </TimelineContent>
       </TimelineItem>
 
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-         
-        </TimelineSeparator>
-        <TimelineContent>
-          <div className='flex flex-col items-start'>
-        <h2 className='dark:text-white text-center w-[70%]'>Data Entry Specialist</h2> 
-        <h3 className='text-[14px] text-center text-gray-400 w-[70%]'>ComplianceEase, Inc.<p className='text-[12px]'>June 2016 - Aug 2016</p>
-        </h3>
-
-        <p className='text-[10px] dark:text-white text-center w-[70%]'>Established a Human Resources department of 4 during a deployment to provide administrative
-support for over 252 Soldiers.</p>
-</div>
-        </TimelineContent>
-      </TimelineItem>
-
+    
       
     </Timeline>
 
