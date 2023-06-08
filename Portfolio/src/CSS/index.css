@@ -1,0 +1,7 @@
+.navbar {
+  transition: transform 7.7s ease-in-out;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+}
