@@ -1,35 +1,34 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import { styled } from '@mui/system';
+import {useState} from 'react';
 
-const StyledTab = styled(Tab)(({ theme }) => ({
-  '&.Mui-selected': {
-    color: theme.palette.common.white,
-  },
-  '&.MuiTab-root': {
-    // Light mode color
-    backgroundColor: theme.palette.mode === 'light' ? '#5A48A9' : '#FCD34D',
-    // Dark mode color
-    color: theme.palette.mode === 'light' ? '#FFF' : '#000',
-  },
-}));
+export default function Tabs() {
 
-export default function CenteredTabs() {
-  const [value, setValue] = React.useState(0);
+    const [activeTab, setActiveTab] = useState('all');
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
+    const handleTabChange = (tab:any) => {
+        setActiveTab(tab)
+    }
 
-  return (
-    <Box sx={{ width: '100%' }}>
-      <Tabs value={value} onChange={handleChange} centered>
-        <StyledTab label="All" />
-        <StyledTab label="Web" />
-        <StyledTab label="Full Stack" />
-      </Tabs>
-    </Box>
-  );
-}
+    return (
+      <div className="w-full grid grid-cols-3">
+
+        <div className="w-full flex h-[50px]  items-center hover:cursor-pointer justify-center" onClick={ ()=> handleTabChange('all')}>
+        <div className={`flex w-[50%] h-full rounded-lg justify-center items-center dark:text-white ${activeTab === 'all' ? 'dark:bg-yellow-500 bg-violet-500' : ''}`}>
+          <h3>All</h3>
+        </div>
+        </div>
+
+        <div className="w-full flex h-[50px]  items-center hover:cursor-pointer justify-center" onClick={() => {handleTabChange('web')}}>
+        <div className={`flex w-[50%] h-full rounded-lg justify-center items-center dark:text-white ${activeTab === 'web' ? 'dark:bg-yellow-500 bg-violet-500' : '' }`}>
+          <h3>Web</h3>
+        </div>
+        </div>
+
+        <div className="w-full flex h-[50px]  items-center hover:cursor-pointer justify-center" onClick={()=>{handleTabChange('full stack')}}>
+        <div className={`flex w-[50%] h-full rounded-lg justify-center items-center dark:text-white ${activeTab === 'full stack' ? 'dark:bg-yellow-500 bg-violet-500' : ''}`}>
+          <h3>Full Stack</h3>
+        </div>
+        </div>
+      </div>
+    );
+  }
+  

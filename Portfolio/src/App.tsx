@@ -40,6 +40,12 @@ function App() {
     };
   }, []);
 
+  const [activeTab, setActiveTab] = useState('all');
+
+  const handleTabChange = (tab: any) => {
+    setActiveTab(tab);
+  }
+
   return (
     <>
       <div>
@@ -52,13 +58,13 @@ function App() {
         )}
 
         {/* navbar, timeline, hero section */}
-        <section className='h-screen'>
+        <section>
           <Navbar />
           <Hero />
         </section>
 
         {/* Timeline */}
-        <section className='flex flex-col text-center justify-center w-full'>
+        <section className='flex flex-col pt-[30em] text-center justify-center w-full'>
           <h2 className='text-5xl dark:text-white'>Timeline</h2>
           <h3 className='mt-2 text-sm text-gray-400'>My Personal Journey</h3>
           <div className=' w-full grid grid-cols-2 justify-center mt-5 mb-5'>
@@ -91,7 +97,7 @@ function App() {
         </section>
 
         {/* Skills */}
-        <section className='w-full h-screen flex flex-col mt-[15em] items-center'>
+        <section className='w-full pt-[25em] h-[70em] flex flex-col justify-start items-center'>
           <div>
             <h2 className='text-5xl text-center dark:text-white'>Skills</h2>
             <h3 className='mt-2 text-sm text-gray-400'>My Technical Skills</h3>
@@ -119,15 +125,17 @@ function App() {
           </div>
         </section>
 
-        <section className='w-full h-screen flex justify-center'>
-           <div>
+        <section className='w-full pt-[5em] flex justify-center'>
+           <div className='w-full'>
             <h2 className='text-5xl text-center dark:text-white'>Portfolio</h2>
-            <h3 className='mt-2 mb-5 text-sm text-center text-gray-400'>My Technical Skills</h3>
-            <Tabs />
+            <h3 className='mt-2 mb-5 text-sm text-center text-gray-400'>My Most Recent Work</h3>
+           <Tabs activeTab={activeTab} onChangeTab={handleTabChange}/>
           </div>
+          </section>
+
+          {/* portfolio cards */}
+          <section className='h-screen'>
           
-
-
 
           </section>
 
