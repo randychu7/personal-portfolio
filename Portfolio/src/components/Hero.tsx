@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
 
         <div className="w-full  text-center flex justify-center mb-10 md:mb-0 ">
-          <img src="./randy.png" className="w-56 rounded-full md:w-80" alt="Example" />
+          <img src="./images/randy.png" className="w-56 rounded-full md:w-80" alt="Example" />
         </div>
       </div>
 };

@@ -11,6 +11,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import FrontLanguages from './components/FrontLanguages';
 import BackLanguages from './components/BackLanguages';
 import Tabs from './components/Tabs';
+import PortfolioCards from './components/Portfolio';
 
 import './CSS/index.css';
 
@@ -129,13 +130,13 @@ function App() {
            <div className='w-full'>
             <h2 className='text-5xl text-center dark:text-white'>Portfolio</h2>
             <h3 className='mt-2 mb-5 text-sm text-center text-gray-400'>My Most Recent Work</h3>
-           <Tabs activeTab={activeTab} onChangeTab={handleTabChange}/>
+            <Tabs activeTab={activeTab} onChangeTab={handleTabChange} />
           </div>
           </section>
 
           {/* portfolio cards */}
           <section className='h-screen'>
-          
+          <PortfolioCards activeTab={activeTab} />
 
           </section>
 
