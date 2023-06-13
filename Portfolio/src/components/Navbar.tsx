@@ -7,6 +7,7 @@ import SummarizeIcon from '@mui/icons-material/Summarize';
 import LocalPostOfficeIcon from '@mui/icons-material/LocalPostOffice';
 import CloseIcon from '@mui/icons-material/Close';
 
+
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,25 +27,26 @@ const Navbar: React.FC = () => {
        
         <ul className="grid grid-cols-2 h-full w-full p-12">
           
-          <li>
-            <a href="#" className="text-2xl flex flex-col-reverse items-center justify-center font-bold text-gray-800 dark:text-white hover:text-gray-400" onClick={toggleOpen}>Home <HomeIcon style={{height:'40px', width:'40px' }}/></a>
-            
+        <li>
+            <a href="#home" className="text-2xl flex flex-col-reverse items-center justify-center font-bold text-gray-800 dark:text-white hover:text-gray-400" onClick={toggleOpen}>Home <HomeIcon style={{height:'40px', width:'40px' }}/></a>
+          
           </li>
+
           <li>
-            <a href="#" className="text-2xl flex flex-col-reverse items-center justify-center font-bold text-gray-800 dark:text-white hover:text-gray-400" onClick={toggleOpen}>Bio   <PersonIcon style={{height:'40px', width:'40px' }}/></a>
+            <a href="#bio" className="text-2xl flex flex-col-reverse items-center justify-center font-bold text-gray-800 dark:text-white hover:text-gray-400" onClick={toggleOpen}>Bio   <PersonIcon style={{height:'40px', width:'40px' }}/></a>
           
           </li>
           <li>
-            <a href="#" className="text-2xl flex flex-col-reverse items-center justify-center font-bold text-gray-800 dark:text-white hover:text-gray-400" onClick={toggleOpen}>Skills <SummarizeIcon style={{height:'40px', width:'40px' }}/></a>
+            <a href="#skills" className="text-2xl flex flex-col-reverse items-center justify-center font-bold text-gray-800 dark:text-white hover:text-gray-400" onClick={toggleOpen}>Skills <SummarizeIcon style={{height:'40px', width:'40px' }}/></a>
             
           </li>
           <li>
-            <a href="#" className="text-2xl flex flex-col-reverse items-center justify-center font-bold text-gray-800 dark:text-white hover:text-gray-400" onClick={toggleOpen}>Projects <ImageIcon style={{height:'40px', width:'40px' }}/></a>
+            <a href="#project" className="text-2xl flex flex-col-reverse items-center justify-center font-bold text-gray-800 dark:text-white hover:text-gray-400" onClick={toggleOpen}>Projects <ImageIcon style={{height:'40px', width:'40px' }}/></a>
             
           </li>
           
             <li>
-              <a href="#" className="text-2xl flex flex-col-reverse items-center justify-center font-bold text-gray-800 dark:text-white hover:text-gray-400" onClick={toggleOpen}>Contact Me <LocalPostOfficeIcon style={{height:'40px', width:'40px' }}/></a>
+              <a href="#contact" className="text-2xl flex flex-col-reverse items-center justify-center font-bold text-gray-800 dark:text-white hover:text-gray-400" onClick={toggleOpen}>Contact Me <LocalPostOfficeIcon style={{height:'40px', width:'40px' }}/></a>
               
             </li>
        
@@ -61,19 +63,19 @@ const Navbar: React.FC = () => {
       <ul id="navbar" className="flex dark:text-white items-center justify-between">
         <h2 className="text-2xl dark:text-white mr-auto">Randy</h2>
         <li>
-          <a href="#" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Home</a>
+          <a href="#home" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Home</a>
         </li>
         <li>
-          <a href="#" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Bio</a>
+          <a href="#bio" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Bio</a>
         </li>
         <li>
-          <a href="#" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Skills</a>
+          <a href="#skills" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Skills</a>
         </li>
         <li>
-          <a href="#" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Projects</a>
+          <a href="#project" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Projects</a>
         </li>
         <li>
-          <a href="#" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Contact Me</a>
+          <a href="#contact" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Contact Me</a>
         </li>
         <li>
           <a className="p-4 flex md:hidden rounded-full mr-4 hover:cursor-pointer hover:text-gray-400" onClick={toggleOpen}>

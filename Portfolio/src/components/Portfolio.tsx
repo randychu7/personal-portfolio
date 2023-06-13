@@ -77,7 +77,7 @@ const cards = [
     id: 6,
     title: 'React Food App',
     description: 'Food App that allows users to add to a cart',
-    image: 'https://picsum.photos/200/300',
+    image: './images/budget.png',
     category: ['all', 'web'],
     link: 'https://github.com/randychu7/react-budget-tool',
     tools: [
@@ -94,9 +94,9 @@ export default function PortfolioCards({ activeTab }) {
     return (
       <div className="grid grid-cols-1 mt-10 md:grid-cols-2 xl:grid-cols-3 gap-7 p-4">
         {filteredCards.map((card) => (
-          <div key={card.id} className="border-[1px] border-gray-700 shadow-lg rounded-2xl">
+          <div key={card.id} className="border-[1px] dark:border-gray-700 shadow-lg rounded-2xl">
             <div className="w-full h-[20em] flex justify-center pt-2 p-4 pb-2">
-              <img className="w-full mt-4 h-full object-cover rounded-2xl" src={card.image} alt={card.title} />
+              <img className="w-full mt-4 h-full object-fit rounded-2xl" src={card.image} alt={card.title} />
             </div>
 
 
@@ -123,7 +123,7 @@ export default function PortfolioCards({ activeTab }) {
 
               <div className="flex justify-between mb-4 mt-4">
                 <div className="flex">
-                  <a href={card.link}>
+                  <a href={card.link} target='blank'>
                     <GitHubIcon
                       style={{ width: '40px', height: '40px' }}
                       className="m-4 dark:text-white dark:hover:text-gray-200 hover:cursor-pointer"
@@ -131,7 +131,7 @@ export default function PortfolioCards({ activeTab }) {
                   </a>
   
                   {card.live ? (
-                    <a href={card.live}>
+                    <a href={card.live} target='blank'>
                       <WebIcon
                         style={{ width: '40px', height: '40px' }}
                         className="m-4 dark:text-white dark:hover:text-gray-200 hover:cursor-pointer"

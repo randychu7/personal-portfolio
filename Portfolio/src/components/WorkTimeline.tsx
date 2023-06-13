@@ -4,15 +4,17 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import '../CSS/index.css'
 
 export default function AlternateTimeline() {
   return (
+
     <Timeline position="alternate" className='work'>
      
-     <TimelineItem className='text-yellow-500'>
+     <TimelineItem>
         <TimelineSeparator>
-          <TimelineDot className='text-yellow-500'/>
-          <TimelineConnector className='text-yellow-500'/>
+          <TimelineDot/>
+          <TimelineConnector/>
         </TimelineSeparator>
         <TimelineContent>
         <h2 className='dark:text-white text-center w-[70%]'>Human Resources Sergeant</h2> 

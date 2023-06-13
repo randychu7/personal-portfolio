@@ -24,18 +24,47 @@ function App() {
     setActiveTimeline(timeline);
   };
 
+
+
+  // const handleScroll = () => {
+  //   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  //   setShowButton(scrollTop > 100);
+  //   const elements = document.querySelectorAll('.fade-in-left');
+  //   elements.forEach((element) => {
+  //     const elementTop = element.getBoundingClientRect().top;
+  //     const windowHeight = window.innerHeight;
+  //     if (elementTop < windowHeight) {
+  //       element.classList.add('fade-in-left-show');
+  //     }
+  //   });
+  // };
+
   const handleScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    setShowButton(scrollTop > 100); // Show button when scrolled down 100 pixels
+    setShowButton(scrollTop > 100);
+    const elements = document.querySelectorAll('.fade-in-left');
+    elements.forEach((element, index) => {
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (elementTop < windowHeight) {
+        setTimeout(() => {
+          element.classList.add('fade-in-left-show');
+        }, index * 100); // Delay each element's animation by 200ms
+      }
+    });
   };
+
+
 
   const scrollToTop = (event: React.MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault(); // Prevent the default jump-to-top behavior
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Attach scroll event listener
   useEffect(() => {
+    handleScroll(); // Call the handleScroll function immediately
+  
+    // Attach scroll event listener
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -52,7 +81,7 @@ function App() {
     <>
       <div>
         {showButton && (
-          <button className='w-[50px] h-[50px] rounded-lg bg-yellow-400 fixed bottom-5 right-5'>
+          <button className='w-[50px] h-[50px] rounded-lg dark:bg-yellow-400 bg-violet-400 fixed bottom-5 right-5' style={{zIndex:'9999'}}>
             <a href='#' onClick={scrollToTop}>
               <ArrowUpwardIcon className='dark:text-white' />
             </a>
@@ -60,20 +89,20 @@ function App() {
         )}
 
         {/* navbar, timeline, hero section */}
-        <section>
-          <Navbar />
+        <section id='home'>
+          <Navbar/>
           <Hero />
         </section>
 
         {/* Timeline */}
-        <section className='flex flex-col pt-[30em] text-center justify-center w-full'>
-          <h2 className='text-5xl dark:text-white'>Timeline</h2>
-          <h3 className='mt-2 text-sm text-gray-400'>My Personal Journey</h3>
-          <div className=' w-full grid grid-cols-2 justify-center mt-5 mb-5'>
+        <section id='bio' className='flex flex-col pt-[30em] text-center justify-center w-full'>
+          <h2 className='text-5xl fade-in-left dark:text-white'>Timeline</h2>
+          <h3 className='mt-2 mb-5 fade-in-left text-sm text-gray-400'>My Personal Journey</h3>
+          <div className=' w-full fade-in-left grid grid-cols-2 justify-center mt-5 mb-5'>
             <div className='dark:text-white text-2xl lg:ml-[10em] md:ml-[5em] ml-[3em]'>
               <h2
-                className={`flex justify-center items-center hover:cursor-pointer ${
-                  activeTimeline === 'work' ? 'text-yellow-400' : ''
+                className={`flex justify-center  items-center hover:cursor-pointer ${
+                  activeTimeline === 'work' ? 'dark:text-yellow-400 text-violet-600' : ''
                 }`}
                 onClick={() => handleToggleTimeline('work')}
               >
@@ -85,7 +114,7 @@ function App() {
             <div className='dark:text-white text-2xl lg:mr-[10em] md:mr-[5em] mr-[3em]'>
               <h2
                 className={`flex justify-center items-center ${
-                  activeTimeline === 'education' ? 'text-yellow-400 hover:cursor-pointer' : ''
+                  activeTimeline === 'education' ? 'dark:text-yellow-400 text-violet-600 hover:cursor-pointer' : ''
                 }`}
                 onClick={() => handleToggleTimeline('education')}
               >
@@ -94,12 +123,14 @@ function App() {
               </h2>
             </div>
           </div>
-
+          <div className='fade-in-left'>
           {activeTimeline === 'work' ? <Timeline /> : <Timeline2 />}
+          </div>
+
         </section>
 
         {/* Skills */}
-        <section className='w-full pt-[25em] h-[70em] flex flex-col justify-start items-center'>
+        <section id='skills' className='w-full fade-in-left pt-[25em] h-[70em] flex flex-col justify-start items-center'>
           <div>
             <h2 className='text-5xl text-center dark:text-white'>Skills</h2>
             <h3 className='mt-2 text-sm text-gray-400'>My Technical Skills</h3>
@@ -126,8 +157,9 @@ function App() {
             </div>
           </div>
         </section>
+        <div id='project'></div>
 
-        <section className='w-full mt-[25em] flex justify-center'>
+        <section  className='w-full mt-[25em] fade-in-left flex justify-center'>
            <div className='w-full'>
             <h2 className='text-5xl text-center dark:text-white'>Portfolio</h2>
             <h3 className='mt-2 mb-5 text-sm text-center text-gray-400'>My Most Recent Work</h3>
@@ -136,15 +168,16 @@ function App() {
           </section>
 
           {/* portfolio cards */}
-          <section className='mt-[3em]'>
+          <section  className='mt-[3em] fade-in-left'>
           <PortfolioCards activeTab={activeTab} />
           </section>
 
-          <section className='mt-[6em]'>
+
+          <section id='contact' className='mt-[15em] fade-in-left mb-[10em]'>
           <Contact />
           </section>
 
-          <section>
+          <section >
             <Footer />
           </section>
 
