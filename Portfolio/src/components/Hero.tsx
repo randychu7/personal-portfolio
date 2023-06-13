@@ -29,7 +29,7 @@ const Hero = () => {
                 Experienced developer with a passion for solving coding challenges, delivering high-quality software solutions, and continuously expanding knowledge in evolving technologies.
           </h3>
 
-          <a href='./Resume.pdf' download="Resume.pdf">
+          <a href='./Randy Chu Resume.pdf' download="Randy Chu Resume.pdf">
           <button
             className="bg-violet-600 fade-in-left dark:bg-yellow-500 dark:hover:bg-yellow-400 hover:bg-violet-800 p-3 mt-8 rounded-md text-white"
           >

@@ -25,20 +25,6 @@ function App() {
   };
 
 
-
-  // const handleScroll = () => {
-  //   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  //   setShowButton(scrollTop > 100);
-  //   const elements = document.querySelectorAll('.fade-in-left');
-  //   elements.forEach((element) => {
-  //     const elementTop = element.getBoundingClientRect().top;
-  //     const windowHeight = window.innerHeight;
-  //     if (elementTop < windowHeight) {
-  //       element.classList.add('fade-in-left-show');
-  //     }
-  //   });
-  // };
-
   const handleScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     setShowButton(scrollTop > 100);
