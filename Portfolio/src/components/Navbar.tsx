@@ -76,9 +76,6 @@ const Navbar: React.FC = () => {
           <a href="#" className="hidden md:flex pl-4 pr-4 hover:cursor-pointer hover:text-gray-400">Contact Me</a>
         </li>
         <li>
-          <a href="#" className="hidden md:flex p-4 rounded-full mr-4 hover:text-gray-400">Resume</a>
-        </li>
-        <li>
           <a className="p-4 flex md:hidden rounded-full mr-4 hover:cursor-pointer hover:text-gray-400" onClick={toggleOpen}>
             <MenuIcon />
           </a>

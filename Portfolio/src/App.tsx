@@ -12,7 +12,8 @@ import FrontLanguages from './components/FrontLanguages';
 import BackLanguages from './components/BackLanguages';
 import Tabs from './components/Tabs';
 import PortfolioCards from './components/Portfolio';
-
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 import './CSS/index.css';
 
 function App() {
@@ -126,7 +127,7 @@ function App() {
           </div>
         </section>
 
-        <section className='w-full pt-[5em] flex justify-center'>
+        <section className='w-full mt-[25em] flex justify-center'>
            <div className='w-full'>
             <h2 className='text-5xl text-center dark:text-white'>Portfolio</h2>
             <h3 className='mt-2 mb-5 text-sm text-center text-gray-400'>My Most Recent Work</h3>
@@ -135,9 +136,16 @@ function App() {
           </section>
 
           {/* portfolio cards */}
-          <section className='h-screen'>
+          <section className='mt-[3em]'>
           <PortfolioCards activeTab={activeTab} />
+          </section>
 
+          <section className='mt-[6em]'>
+          <Contact />
+          </section>
+
+          <section>
+            <Footer />
           </section>
 
 
